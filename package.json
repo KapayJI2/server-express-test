@@ -1,0 +1,36 @@
+{
+  "name": "server-express-test",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "repository": "https://kapayji-admin@bitbucket.org/kapayji/server-express-test.git",
+  "author": "kapayji-admin <kapayji@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js",
+    "start:dev": "nodemon --experimental-specifier-resolution=node app.js",
+    "start:pm2":"pm2 stop storage && pm2 start app.js -n storage && pm2 logs storage",
+    "format": "prettier --config ./.prettierrc --write ."
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.7",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "express-fileupload": "^1.3.1",
+    "express-validator": "^6.14.0",
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.3.0",
+    "mongoose": "^7.3.1",
+    "uniqid": "^5.4.0"
+  },
+  "devDependencies": {
+    "@sequelize/core": "^7.0.0-alpha.10",
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.22",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "prettier": "^2.8.8",
+    "sequelize": "^6.17.0"
+  }
+}
